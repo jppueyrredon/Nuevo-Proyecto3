@@ -1,13 +1,18 @@
 body {
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 }
-:root {
-    --color-principal: blue; 
+:root{
+ --color-principal:blue; 
+ --fuente-principal: Arial; 
 }
 
 #header1 { 
     height: 30px;
     background-color: var(--color-principal);
+
+}
+.title{
+   syntax: var(--fuente-principal);
 }
 
 
