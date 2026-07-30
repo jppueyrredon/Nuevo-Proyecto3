@@ -4,6 +4,7 @@ body {
 :root{
  --color-principal:blue; 
  --fuente-principal: Arial; 
+ background-color: #e9b3b3;
 }
 
 #header1 { 
