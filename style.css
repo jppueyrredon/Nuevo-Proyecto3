@@ -1,649 +1,627 @@
-<!-- ================= REGISTRO ================= -->
+/* ==========================
+   VARIABLES GLOBALES
+========================== */
 
+:root{
 
-<section id="registro" class="section bg-light">
+    --primary:#2563eb;
+    --secondary:#7c3aed;
+    --dark:#111827;
+    --light:#f3f4f6;
+    --white:#ffffff;
+    --text:#374151;
+    --shadow:0 10px 25px rgba(0,0,0,.15);
 
+}
 
-<div class="container">
 
 
-<h2>
-Crear cuenta
-</h2>
+/* ==========================
+   CONFIGURACIÓN GENERAL
+========================== */
 
 
-<p class="text-center">
-Registrate para acceder a nuestros servicios.
-</p>
+*{
 
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 
+}
 
-<form action="TU_ENDPOINT_FORMSPREE" method="POST" class="formulario">
 
+html{
 
-<fieldset>
+    scroll-behavior:smooth;
 
+}
 
-<legend>
-Información personal
-</legend>
 
 
+body{
 
-<label for="nombre">
-Nombre completo
-</label>
+    font-family:
+    system-ui,
+    Arial,
+    sans-serif;
 
+    background:var(--light);
 
-<input
-type="text"
-id="nombre"
-name="nombre"
-placeholder="Lucas Fernández"
-autocomplete="name"
-required>
+    color:var(--text);
 
+    line-height:1.6;
 
+}
 
-<label for="email">
-Correo electrónico
-</label>
 
 
-<input
-type="email"
-id="email"
-name="email"
-placeholder="correo@email.com"
-autocomplete="email"
-required>
 
+h1,h2,h3,h4{
 
+    font-weight:700;
 
+}
 
-<label for="password">
-Contraseña
-</label>
 
 
-<input
-type="password"
-id="password"
-name="password"
-placeholder="Mínimo 8 caracteres"
-minlength="8"
-autocomplete="new-password"
-required>
+h2{
 
+    text-align:center;
 
+    margin-bottom:30px;
 
+    color:var(--dark);
 
-<label for="edad">
-Edad
-</label>
+}
 
 
-<input
-type="number"
-id="edad"
-name="edad"
-min="13"
-max="100"
-required>
 
 
 
+/* ==========================
+   NAVBAR
+========================== */
 
-<label for="fecha">
-Fecha de nacimiento
-</label>
 
+.navbar{
 
-<input
-type="date"
-id="fecha"
-name="fecha_nacimiento"
-required>
+    background:rgba(17,24,39,.95);
 
+    backdrop-filter:blur(10px);
 
+}
 
 
-</fieldset>
 
+.navbar-brand{
 
+    font-size:1.5rem;
 
+    font-weight:bold;
 
+}
 
-<fieldset>
 
 
-<legend>
-Información de cuenta
-</legend>
+.nav-link{
 
+    color:white !important;
 
+    margin-left:15px;
 
+    transition:.3s;
 
-<label for="usuario">
-Nombre de usuario
-</label>
+}
 
 
-<input
 
-type="text"
+.nav-link:hover{
 
-id="usuario"
+    color:#60a5fa !important;
 
-name="usuario"
+}
 
-placeholder="lucas123"
 
-pattern="[A-Za-z0-9]{5,12}"
 
-minlength="5"
 
-maxlength="12"
 
-required>
+/* ==========================
+   HERO
+========================== */
 
 
+.hero{
 
-<small>
-Debe tener entre 5 y 12 caracteres alfanuméricos.
-</small>
+    min-height:100vh;
 
+    display:flex;
 
+    align-items:center;
 
+    background:
 
-<label for="pais">
-País
-</label>
+    linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+    );
 
+    color:white;
 
+    padding-top:80px;
 
-<select
-id="pais"
-name="pais"
-required>
+}
 
 
-<option value="">
-Seleccionar país
-</option>
 
+.hero h1{
 
-<option>
-Argentina
-</option>
+    font-size:3rem;
 
+}
 
-<option>
-Chile
-</option>
 
 
-<option>
-Uruguay
-</option>
+.hero h2{
 
+    color:white;
 
-<option>
-Brasil
-</option>
+}
 
 
 
-</select>
+.hero p{
 
+    font-size:1.2rem;
 
+    margin:20px 0;
 
+}
 
 
-<label for="ciudad">
-Ciudad
-</label>
 
+.foto-perfil{
 
+    width:280px;
 
-<input
+    height:280px;
 
-list="ciudades"
+    border-radius:50%;
 
-id="ciudad"
+    object-fit:cover;
 
-name="ciudad"
+    border:8px solid white;
 
-placeholder="Seleccione ciudad"
+    box-shadow:var(--shadow);
 
-required>
+    animation:flotar 3s infinite;
 
+}
 
 
-<datalist id="ciudades">
 
 
-<option value="Buenos Aires">
+@keyframes flotar{
 
 
-<option value="Córdoba">
+50%{
 
+transform:translateY(-15px);
 
-<option value="Rosario">
+}
 
 
-<option value="Mendoza">
+}
 
 
-<option value="La Plata">
 
 
 
-</datalist>
 
 
+/* ==========================
+   BOTONES
+========================== */
 
-</fieldset>
 
+.btn{
 
+    border-radius:30px;
 
+    padding:12px 30px;
 
+    margin:10px;
 
+    transition:.3s;
 
-<fieldset>
+}
 
 
-<legend>
-Preferencias
-</legend>
 
+.btn:hover{
 
+    transform:translateY(-3px);
 
-<p>
-Género
-</p>
+}
 
 
 
-<label>
 
-<input
-type="radio"
-name="genero"
-value="Masculino"
-required>
 
-Masculino
+/* ==========================
+   SECCIONES
+========================== */
 
-</label>
 
+.section{
 
+    padding:90px 0;
 
+}
 
-<label>
 
-<input
-type="radio"
-name="genero"
-value="Femenino">
 
-Femenino
 
-</label>
 
+/* ==========================
+   PORTFOLIO
+========================== */
 
 
+.proyecto{
 
-<label>
+    border:none;
 
-<input
-type="radio"
-name="genero"
-value="Otro">
+    border-radius:20px;
 
-Otro
+    overflow:hidden;
 
-</label>
+    box-shadow:var(--shadow);
 
+    transition:.4s;
 
+}
 
 
 
-<p>
-Intereses
-</p>
+.proyecto:hover{
 
+    transform:translateY(-10px);
 
+}
 
-<label>
 
-<input
-type="checkbox"
-name="intereses"
-value="Diseño">
 
-Diseño web
+.proyecto img{
 
-</label>
+    height:230px;
 
+    object-fit:cover;
 
+}
 
 
-<label>
 
-<input
-type="checkbox"
-name="intereses"
-value="Programacion">
+.proyecto span{
 
-Programación
+    display:inline-block;
 
-</label>
+    background:#dbeafe;
 
+    color:#1d4ed8;
 
+    padding:5px 12px;
 
+    border-radius:20px;
 
-<label>
+    font-size:.8rem;
 
-<input
-type="checkbox"
-name="intereses"
-value="Tecnologia">
+    margin:5px;
 
-Tecnología
+}
 
-</label>
 
 
 
 
 
 
-<label for="bio">
+/* ==========================
+   SERVICIOS
+========================== */
 
-Biografía
 
-</label>
+#servicios h3{
 
+    color:var(--primary);
 
+}
 
-<textarea
 
-id="bio"
 
-name="biografia"
 
-rows="5"
 
-maxlength="300"
+/* ==========================
+   HABILIDADES
+========================== */
 
-placeholder="Contanos sobre vos..."
 
-required>
+.progress{
 
-</textarea>
+    height:25px;
 
+    margin-bottom:20px;
 
+}
 
 
-</fieldset>
 
+.progress-bar{
 
+    background:
 
+    linear-gradient(
+    90deg,
+    var(--primary),
+    var(--secondary)
+    );
 
+}
 
-<label>
 
-<input
-type="checkbox"
-required>
 
-Acepto términos y condiciones
 
-</label>
 
+/* ==========================
+   ECOMMERCE
+========================== */
 
 
+.ecommerce{
 
-<button type="submit">
+    background:white;
 
-Registrarme
+}
 
-</button>
 
 
 
-</form>
+.galeria{
 
+    display:grid;
 
-</div>
+    grid-template-columns:
 
+    repeat(
+    auto-fit,
+    minmax(250px,1fr)
+    );
 
-</section>
 
+    gap:25px;
 
+}
 
 
 
+.producto{
 
+    background:white;
 
-<!-- ================= CONTACTO ================= -->
+    padding:30px;
 
+    text-align:center;
 
-<section id="contacto" class="section">
+    border-radius:20px;
 
+    box-shadow:var(--shadow);
 
-<div class="container">
+    transition:.3s;
 
+}
 
-<h2>
-Contacto
-</h2>
 
 
+.producto:hover{
 
-<form action="TU_ENDPOINT_FORMSPREE" method="POST" class="formulario">
+    transform:scale(1.05);
 
+}
 
 
-<label for="nombre-contacto">
 
-Nombre
+.producto strong{
 
-</label>
+    display:block;
 
+    font-size:1.5rem;
 
-<input
+    color:var(--primary);
 
-type="text"
+    margin:15px;
 
-id="nombre-contacto"
+}
 
-name="nombre_contacto"
 
-required>
 
+.producto button{
 
+    background:var(--primary);
 
+    color:white;
 
-<label for="email-contacto">
+    border:none;
 
-Email
+    padding:10px 25px;
 
-</label>
+    border-radius:30px;
 
+}
 
-<input
 
-type="email"
 
-id="email-contacto"
 
-name="email_contacto"
 
-required>
 
 
+/* ==========================
+   FORMULARIOS
+========================== */
 
 
+.formulario{
 
-<label for="motivo">
+    background:white;
 
-Motivo de contacto
+    padding:40px;
 
-</label>
+    border-radius:20px;
 
+    box-shadow:var(--shadow);
 
+}
 
-<select
 
-id="motivo"
 
-name="motivo"
+fieldset{
 
-required>
+    border:none;
 
+    margin-bottom:25px;
 
-<option>
-Consulta general
-</option>
+}
 
 
-<option>
-Soporte técnico
-</option>
 
+legend{
 
-<option>
-Presupuesto
-</option>
+    color:var(--primary);
 
+    font-size:1.3rem;
 
-<option>
-Otro
-</option>
+    font-weight:bold;
 
+}
 
 
-</select>
 
+label{
 
+    display:block;
 
+    margin-top:15px;
 
+    font-weight:600;
 
+}
 
-<label for="mensaje">
 
-Mensaje
 
-</label>
+input,
+select,
+textarea{
 
 
+    width:100%;
 
-<textarea
+    padding:12px;
 
-id="mensaje"
+    border-radius:10px;
 
-name="mensaje"
+    border:1px solid #d1d5db;
 
-rows="6"
+    margin-top:5px;
 
-placeholder="Escriba su mensaje..."
+}
 
-required>
 
-</textarea>
 
+input:focus,
+textarea:focus,
+select:focus{
 
+    outline:none;
 
+    border-color:var(--primary);
 
-<label>
+}
 
-<input
 
-type="checkbox"
 
-required>
 
-Acepto los términos y condiciones
 
-</label>
+.formulario button{
 
+    background:var(--primary);
 
+    color:white;
 
+    border:none;
 
+    padding:12px 35px;
 
-<button>
+    border-radius:30px;
 
-Enviar mensaje
+    margin-top:20px;
 
-</button>
+}
 
 
 
-</form>
 
 
+/* ==========================
+   FOOTER
+========================== */
 
-</div>
 
+footer{
 
-</section>
+    background:var(--dark);
 
+    color:white;
 
+    text-align:center;
 
+    padding:40px;
 
+}
 
 
 
-<!-- ================= FOOTER ================= -->
 
 
-<footer>
+/* ==========================
+   RESPONSIVE
+========================== */
 
 
-<div class="container">
+@media(max-width:768px){
 
 
-<h3>
-Lucas Fernández
-</h3>
+.hero h1{
 
+    font-size:2.2rem;
 
+}
 
-<p>
-Desarrollador Web Junior
-</p>
 
 
+.foto-perfil{
 
-<p>
-Buenos Aires, Argentina
-</p>
+    width:200px;
 
+    height:200px;
 
+}
 
-<p>
-© 2026 Lucas Fernández - Todos los derechos reservados.
-</p>
 
 
+.hero{
 
-</div>
+    text-align:center;
 
+}
 
-</footer>
 
-
-
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
-
-</body>
-
-
-</html>
+}
