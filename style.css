@@ -625,3 +625,29 @@ footer{
 
 
 }
+/* ==========================
+   ANIMACIONES JAVASCRIPT
+========================== */
+
+
+.proyecto,
+.producto,
+.section{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:.8s;
+
+}
+
+
+
+.mostrar{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
