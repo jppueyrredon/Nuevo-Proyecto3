@@ -1,38 +1,582 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
+
+    <title>Portfolio Profesional - Lucas Fernández</title>
 
     <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
+
 <body>
 
-    <div class="contenedor">
+<!-- NAVBAR -->
 
-        <header>
-            <h1>¡Bienvenido a Nuestra Tienda!</h1>
-            <p>Descubrí los mejores productos con la mejor calidad y al mejor precio.</p>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-            <a href="#" class="boton">Comprar Ahora</a>
-        </header>
+    <div class="container">
 
-        <section>
-            <h2>¿Por qué elegirnos?</h2>
-            <p>Ofrecemos productos de excelente calidad, envíos rápidos y atención personalizada para todos nuestros clientes.</p>
-        </section>
+        <a class="navbar-brand" href="#">
+            Lucas Fernández
+        </a>
 
-        <section>
-            <h2>Nuestros Productos</h2>
-            <p>Contamos con una gran variedad de artículos para satisfacer todas tus necesidades.</p>
-        </section>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
 
-        <footer>
-            <p>© 2026 Landing Page - Todos los derechos reservados.</p>
-        </footer>
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#portfolio">
+                        Portfolio
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#tienda">
+                        Tienda
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#registro">
+                        Registro
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">
+                        Contacto
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
 
     </div>
 
+</nav>
+
+
+<!-- PRESENTACION -->
+
+<header class="hero text-center">
+
+    <img src="https://picsum.photos/220"
+    class="foto-perfil"
+    alt="Foto Lucas Fernández">
+
+
+    <h1>
+        Lucas Fernández
+    </h1>
+
+
+    <p>
+        Desarrollador Web | HTML | CSS | Bootstrap
+    </p>
+
+
+</header>
+
+
+
+<!-- PORTFOLIO -->
+
+
+<section id="portfolio" class="container py-5">
+
+
+<h2>
+Portfolio
+</h2>
+
+<hr>
+
+
+<div class="row">
+
+
+<div class="col-md-4">
+
+<div class="card">
+
+<img src="https://picsum.photos/400/250?1">
+
+<div class="card-body">
+
+<h3>
+Landing Page
+</h3>
+
+<p>
+Página profesional desarrollada con HTML y CSS.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="col-md-4">
+
+<div class="card">
+
+<img src="https://picsum.photos/400/250?2">
+
+
+<div class="card-body">
+
+<h3>
+Ecommerce
+</h3>
+
+<p>
+Galería de productos responsive.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="col-md-4">
+
+<div class="card">
+
+<img src="https://picsum.photos/400/250?3">
+
+
+<div class="card-body">
+
+<h3>
+Formularios
+</h3>
+
+<p>
+Registro y contacto con validaciones.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+<!-- GALERIA ECOMMERCE -->
+
+
+<section id="tienda">
+
+
+<h2 class="text-center">
+Tienda Online
+</h2>
+
+
+<hr>
+
+
+<div class="galeria">
+
+
+<div class="item">
+Producto 1
+</div>
+
+
+<div class="item">
+Producto 2
+</div>
+
+
+<div class="item">
+Producto 3
+</div>
+
+
+<div class="item">
+Producto 4
+</div>
+
+
+<div class="item">
+Producto 5
+</div>
+
+
+<div class="item">
+Producto 6
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<!-- SOBRE MI -->
+
+
+<section class="sobre-mi">
+
+
+<div class="container">
+
+
+<h2>
+Acerca de mí
+</h2>
+
+
+<hr>
+
+
+<p>
+
+Soy Lucas Fernández, desarrollador web en formación.
+Me especializo en crear páginas modernas,
+responsive y fáciles de utilizar utilizando HTML,
+CSS y Bootstrap.
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<!-- REGISTRO -->
+
+
+<section id="registro" class="container py-5">
+
+
+<h2>
+Registro de Usuario
+</h2>
+
+
+<hr>
+
+
+
+<form action="TU_ENDPOINT_FORMSPREE" method="POST">
+
+
+<fieldset>
+
+
+<legend>
+Datos personales
+</legend>
+
+
+<label>
+Nombre completo:
+</label>
+
+<input 
+type="text"
+name="nombre"
+required
+autocomplete="name">
+
+
+
+<label>
+Email:
+</label>
+
+<input
+type="email"
+name="email"
+required
+autocomplete="email">
+
+
+
+<label>
+Contraseña:
+</label>
+
+<input
+type="password"
+name="password"
+required
+minlength="8"
+autocomplete="new-password">
+
+
+
+<label>
+Edad:
+</label>
+
+<input
+type="number"
+name="edad"
+min="13"
+max="100"
+required>
+
+
+
+<label>
+Fecha nacimiento:
+</label>
+
+<input
+type="date"
+name="fecha"
+required>
+
+
+
+</fieldset>
+
+
+
+<fieldset>
+
+
+<legend>
+Cuenta
+</legend>
+
+
+
+<label>
+Usuario:
+</label>
+
+
+<input
+type="text"
+name="usuario"
+pattern="[A-Za-z0-9]{5,12}"
+minlength="5"
+maxlength="12"
+required
+placeholder="usuario123">
+
+
+
+<label>
+País:
+</label>
+
+
+<select name="pais" required>
+
+<option>
+Argentina
+</option>
+
+<option>
+Chile
+</option>
+
+<option>
+Uruguay
+</option>
+
+
+</select>
+
+
+
+<label>
+Ciudad:
+</label>
+
+
+<input list="ciudades" name="ciudad">
+
+
+<datalist id="ciudades">
+
+<option value="Buenos Aires">
+
+<option value="Cordoba">
+
+<option value="Rosario">
+
+</datalist>
+
+
+
+</fieldset>
+
+
+
+<button>
+Registrarse
+</button>
+
+
+</form>
+
+
+</section>
+
+
+
+
+
+
+<!-- CONTACTO -->
+
+
+<section id="contacto" class="container py-5">
+
+
+<h2>
+Contacto
+</h2>
+
+
+<hr>
+
+
+
+<form>
+
+
+<label>
+Nombre:
+</label>
+
+
+<input type="text" required>
+
+
+
+<label>
+Email:
+</label>
+
+
+<input type="email" required>
+
+
+
+<label>
+Motivo:
+</label>
+
+
+<select>
+
+<option>
+Consulta
+</option>
+
+<option>
+Soporte
+</option>
+
+<option>
+Reclamo
+</option>
+
+
+</select>
+
+
+
+<label>
+Mensaje:
+</label>
+
+
+<textarea rows="5"></textarea>
+
+
+
+<label>
+
+<input type="checkbox" required>
+
+Acepto términos y condiciones
+
+</label>
+
+
+
+<button>
+Enviar
+</button>
+
+
+
+</form>
+
+
+
+</section>
+
+
+
+
+<!-- FOOTER -->
+
+
+<footer>
+
+
+<p>
+Lucas Fernández - Buenos Aires Argentina
+</p>
+
+
+<p>
+© 2026 Todos los derechos reservados
+</p>
+
+
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
 </body>
+
 </html>
