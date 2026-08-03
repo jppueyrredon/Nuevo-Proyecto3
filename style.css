@@ -1,387 +1,649 @@
-/* ==========================
-   ESTILOS GENERALES
-========================== */
+<!-- ================= REGISTRO ================= -->
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
 
+<section id="registro" class="section bg-light">
 
-body{
 
-    font-family:system-ui, Arial, sans-serif;
-    background-color:#f5f5f5;
-    color:#333;
+<div class="container">
 
-}
 
+<h2>
+Crear cuenta
+</h2>
 
-h1,h2,h3{
 
-    font-weight:bold;
+<p class="text-center">
+Registrate para acceder a nuestros servicios.
+</p>
 
-}
 
 
-h2{
+<form action="TU_ENDPOINT_FORMSPREE" method="POST" class="formulario">
 
-    text-align:center;
-    margin-bottom:20px;
 
-}
+<fieldset>
 
 
-hr{
+<legend>
+Información personal
+</legend>
 
-    width:80px;
-    height:4px;
-    background:#0d6efd;
-    border:none;
-    margin:20px auto 40px;
 
-}
 
+<label for="nombre">
+Nombre completo
+</label>
 
 
-/* ==========================
-   HEADER
-========================== */
+<input
+type="text"
+id="nombre"
+name="nombre"
+placeholder="Lucas Fernández"
+autocomplete="name"
+required>
 
 
-.hero{
 
-    background:linear-gradient(135deg,#0d6efd,#6610f2);
-    color:white;
-    padding:70px 20px;
+<label for="email">
+Correo electrónico
+</label>
 
-}
 
+<input
+type="email"
+id="email"
+name="email"
+placeholder="correo@email.com"
+autocomplete="email"
+required>
 
-.hero h1{
 
-    margin-top:25px;
-    font-size:45px;
 
-}
 
+<label for="password">
+Contraseña
+</label>
 
-.hero p{
 
-    font-size:20px;
+<input
+type="password"
+id="password"
+name="password"
+placeholder="Mínimo 8 caracteres"
+minlength="8"
+autocomplete="new-password"
+required>
 
-}
 
 
-.foto-perfil{
 
-    width:220px;
-    height:220px;
-    border-radius:50%;
-    object-fit:cover;
-    border:5px solid white;
+<label for="edad">
+Edad
+</label>
 
-}
 
+<input
+type="number"
+id="edad"
+name="edad"
+min="13"
+max="100"
+required>
 
 
-/* ==========================
-   PORTFOLIO
-========================== */
 
 
-.card{
+<label for="fecha">
+Fecha de nacimiento
+</label>
 
-    border:none;
-    border-radius:15px;
-    overflow:hidden;
-    margin-bottom:25px;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
-    transition:.3s;
 
-}
+<input
+type="date"
+id="fecha"
+name="fecha_nacimiento"
+required>
 
 
-.card:hover{
 
-    transform:translateY(-8px);
 
-}
+</fieldset>
 
 
-.card img{
 
-    width:100%;
 
-}
 
+<fieldset>
 
 
-/* ==========================
-   GALERIA ECOMMERCE
-========================== */
+<legend>
+Información de cuenta
+</legend>
 
 
-#tienda{
 
-    padding:50px 20px;
 
-}
+<label for="usuario">
+Nombre de usuario
+</label>
 
 
+<input
 
-.galeria{
+type="text"
 
-    display:grid;
+id="usuario"
 
-    grid-template-columns:
-    repeat(auto-fit,minmax(250px,1fr));
+name="usuario"
 
-    gap:20px;
+placeholder="lucas123"
 
-    padding:20px;
+pattern="[A-Za-z0-9]{5,12}"
 
-}
+minlength="5"
 
+maxlength="12"
 
+required>
 
-.item{
 
-    height:200px;
 
-    background:#3498db;
+<small>
+Debe tener entre 5 y 12 caracteres alfanuméricos.
+</small>
 
-    color:white;
 
-    display:flex;
 
-    justify-content:center;
 
-    align-items:center;
+<label for="pais">
+País
+</label>
 
-    font-size:25px;
 
-    font-weight:bold;
 
-    border-radius:10px;
+<select
+id="pais"
+name="pais"
+required>
 
-    transition:.3s;
 
-}
+<option value="">
+Seleccionar país
+</option>
 
 
-.item:hover{
+<option>
+Argentina
+</option>
 
-    background:#21618c;
 
-    transform:scale(1.05);
+<option>
+Chile
+</option>
 
-}
 
+<option>
+Uruguay
+</option>
 
 
-/* ==========================
-   ACERCA DE MI
-========================== */
+<option>
+Brasil
+</option>
 
 
-.sobre-mi{
 
-    background:white;
+</select>
 
-    padding:60px 20px;
 
-}
 
 
-.sobre-mi p{
 
-    max-width:800px;
+<label for="ciudad">
+Ciudad
+</label>
 
-    margin:auto;
 
-    text-align:center;
 
-    font-size:18px;
+<input
 
-    line-height:1.7;
+list="ciudades"
 
-}
+id="ciudad"
 
+name="ciudad"
 
+placeholder="Seleccione ciudad"
 
-/* ==========================
-   FORMULARIOS
-========================== */
+required>
 
 
-form{
 
-    background:white;
+<datalist id="ciudades">
 
-    padding:30px;
 
-    border-radius:15px;
+<option value="Buenos Aires">
 
-    max-width:700px;
 
-    margin:auto;
+<option value="Córdoba">
 
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
 
-}
+<option value="Rosario">
 
 
+<option value="Mendoza">
 
-fieldset{
 
-    border:none;
+<option value="La Plata">
 
-    margin-bottom:25px;
 
-}
 
+</datalist>
 
 
-legend{
 
-    font-size:22px;
+</fieldset>
 
-    font-weight:bold;
 
-    color:#0d6efd;
 
-    margin-bottom:15px;
 
-}
 
 
+<fieldset>
 
-label{
 
-    display:block;
+<legend>
+Preferencias
+</legend>
 
-    margin-top:15px;
 
-    font-weight:bold;
 
-}
+<p>
+Género
+</p>
 
 
 
-input,
-select,
-textarea{
+<label>
 
+<input
+type="radio"
+name="genero"
+value="Masculino"
+required>
 
-    width:100%;
+Masculino
 
-    padding:12px;
+</label>
 
-    margin-top:5px;
 
-    border:1px solid #ccc;
 
-    border-radius:8px;
 
-    font-size:16px;
+<label>
 
+<input
+type="radio"
+name="genero"
+value="Femenino">
 
-}
+Femenino
 
+</label>
 
 
-button{
 
-    background:#0d6efd;
 
-    color:white;
+<label>
 
-    border:none;
+<input
+type="radio"
+name="genero"
+value="Otro">
 
-    padding:12px 30px;
+Otro
 
-    border-radius:10px;
+</label>
 
-    margin-top:20px;
 
-    cursor:pointer;
 
-    font-size:16px;
 
-    transition:.3s;
 
-}
+<p>
+Intereses
+</p>
 
 
 
-button:hover{
+<label>
 
-    background:#084298;
+<input
+type="checkbox"
+name="intereses"
+value="Diseño">
 
-}
+Diseño web
 
+</label>
 
 
-/* ==========================
-   FOOTER
-========================== */
 
 
-footer{
+<label>
 
-    background:#212529;
+<input
+type="checkbox"
+name="intereses"
+value="Programacion">
 
-    color:white;
+Programación
 
-    text-align:center;
+</label>
 
-    padding:30px;
 
-    margin-top:40px;
 
-}
 
+<label>
 
+<input
+type="checkbox"
+name="intereses"
+value="Tecnologia">
 
-/* ==========================
-   NAVBAR
-========================== */
+Tecnología
 
+</label>
 
-.navbar-brand{
 
-    font-size:22px;
 
-    font-weight:bold;
 
-}
 
 
+<label for="bio">
 
-/* ==========================
-   RESPONSIVE
-========================== */
+Biografía
 
+</label>
 
-@media(max-width:768px){
 
 
-    .hero h1{
+<textarea
 
-        font-size:32px;
+id="bio"
 
-    }
+name="biografia"
 
+rows="5"
 
-    .foto-perfil{
+maxlength="300"
 
-        width:160px;
+placeholder="Contanos sobre vos..."
 
-        height:160px;
+required>
 
-    }
+</textarea>
 
 
-}
+
+
+</fieldset>
+
+
+
+
+
+<label>
+
+<input
+type="checkbox"
+required>
+
+Acepto términos y condiciones
+
+</label>
+
+
+
+
+<button type="submit">
+
+Registrarme
+
+</button>
+
+
+
+</form>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ================= CONTACTO ================= -->
+
+
+<section id="contacto" class="section">
+
+
+<div class="container">
+
+
+<h2>
+Contacto
+</h2>
+
+
+
+<form action="TU_ENDPOINT_FORMSPREE" method="POST" class="formulario">
+
+
+
+<label for="nombre-contacto">
+
+Nombre
+
+</label>
+
+
+<input
+
+type="text"
+
+id="nombre-contacto"
+
+name="nombre_contacto"
+
+required>
+
+
+
+
+<label for="email-contacto">
+
+Email
+
+</label>
+
+
+<input
+
+type="email"
+
+id="email-contacto"
+
+name="email_contacto"
+
+required>
+
+
+
+
+
+<label for="motivo">
+
+Motivo de contacto
+
+</label>
+
+
+
+<select
+
+id="motivo"
+
+name="motivo"
+
+required>
+
+
+<option>
+Consulta general
+</option>
+
+
+<option>
+Soporte técnico
+</option>
+
+
+<option>
+Presupuesto
+</option>
+
+
+<option>
+Otro
+</option>
+
+
+
+</select>
+
+
+
+
+
+
+<label for="mensaje">
+
+Mensaje
+
+</label>
+
+
+
+<textarea
+
+id="mensaje"
+
+name="mensaje"
+
+rows="6"
+
+placeholder="Escriba su mensaje..."
+
+required>
+
+</textarea>
+
+
+
+
+<label>
+
+<input
+
+type="checkbox"
+
+required>
+
+Acepto los términos y condiciones
+
+</label>
+
+
+
+
+
+<button>
+
+Enviar mensaje
+
+</button>
+
+
+
+</form>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ================= FOOTER ================= -->
+
+
+<footer>
+
+
+<div class="container">
+
+
+<h3>
+Lucas Fernández
+</h3>
+
+
+
+<p>
+Desarrollador Web Junior
+</p>
+
+
+
+<p>
+Buenos Aires, Argentina
+</p>
+
+
+
+<p>
+© 2026 Lucas Fernández - Todos los derechos reservados.
+</p>
+
+
+
+</div>
+
+
+</footer>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
+
+
+</html>
