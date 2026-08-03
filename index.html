@@ -1,582 +1,387 @@
-<!DOCTYPE html>
-<html lang="es">
+/* ==========================
+   ESTILOS GENERALES
+========================== */
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    <title>Portfolio Profesional - Lucas Fernández</title>
 
-    <link rel="stylesheet" href="css/style.css">
+body{
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    font-family:system-ui, Arial, sans-serif;
+    background-color:#f5f5f5;
+    color:#333;
 
-</head>
+}
 
-<body>
 
-<!-- NAVBAR -->
+h1,h2,h3{
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    font-weight:bold;
 
-    <div class="container">
+}
 
-        <a class="navbar-brand" href="#">
-            Lucas Fernández
-        </a>
 
-        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+h2{
 
-            <span class="navbar-toggler-icon"></span>
+    text-align:center;
+    margin-bottom:20px;
 
-        </button>
+}
 
 
-        <div class="collapse navbar-collapse" id="menu">
+hr{
 
-            <ul class="navbar-nav ms-auto">
+    width:80px;
+    height:4px;
+    background:#0d6efd;
+    border:none;
+    margin:20px auto 40px;
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#portfolio">
-                        Portfolio
-                    </a>
-                </li>
+}
 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#tienda">
-                        Tienda
-                    </a>
-                </li>
 
+/* ==========================
+   HEADER
+========================== */
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#registro">
-                        Registro
-                    </a>
-                </li>
 
+.hero{
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#contacto">
-                        Contacto
-                    </a>
-                </li>
+    background:linear-gradient(135deg,#0d6efd,#6610f2);
+    color:white;
+    padding:70px 20px;
 
-            </ul>
+}
 
-        </div>
 
-    </div>
+.hero h1{
 
-</nav>
+    margin-top:25px;
+    font-size:45px;
 
+}
 
-<!-- PRESENTACION -->
 
-<header class="hero text-center">
+.hero p{
 
-    <img src="https://picsum.photos/220"
-    class="foto-perfil"
-    alt="Foto Lucas Fernández">
+    font-size:20px;
 
+}
 
-    <h1>
-        Lucas Fernández
-    </h1>
 
+.foto-perfil{
 
-    <p>
-        Desarrollador Web | HTML | CSS | Bootstrap
-    </p>
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid white;
 
+}
 
-</header>
 
 
+/* ==========================
+   PORTFOLIO
+========================== */
 
-<!-- PORTFOLIO -->
 
+.card{
 
-<section id="portfolio" class="container py-5">
+    border:none;
+    border-radius:15px;
+    overflow:hidden;
+    margin-bottom:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    transition:.3s;
 
+}
 
-<h2>
-Portfolio
-</h2>
 
-<hr>
+.card:hover{
 
+    transform:translateY(-8px);
 
-<div class="row">
+}
 
 
-<div class="col-md-4">
+.card img{
 
-<div class="card">
+    width:100%;
 
-<img src="https://picsum.photos/400/250?1">
+}
 
-<div class="card-body">
 
-<h3>
-Landing Page
-</h3>
 
-<p>
-Página profesional desarrollada con HTML y CSS.
-</p>
+/* ==========================
+   GALERIA ECOMMERCE
+========================== */
 
-</div>
 
-</div>
+#tienda{
 
-</div>
+    padding:50px 20px;
 
+}
 
 
-<div class="col-md-4">
 
-<div class="card">
+.galeria{
 
-<img src="https://picsum.photos/400/250?2">
+    display:grid;
 
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
 
-<div class="card-body">
+    gap:20px;
 
-<h3>
-Ecommerce
-</h3>
+    padding:20px;
 
-<p>
-Galería de productos responsive.
-</p>
+}
 
-</div>
 
-</div>
 
-</div>
+.item{
 
+    height:200px;
 
+    background:#3498db;
 
-<div class="col-md-4">
+    color:white;
 
-<div class="card">
+    display:flex;
 
-<img src="https://picsum.photos/400/250?3">
+    justify-content:center;
 
+    align-items:center;
 
-<div class="card-body">
+    font-size:25px;
 
-<h3>
-Formularios
-</h3>
+    font-weight:bold;
 
-<p>
-Registro y contacto con validaciones.
-</p>
+    border-radius:10px;
 
-</div>
+    transition:.3s;
 
-</div>
+}
 
-</div>
 
+.item:hover{
 
-</div>
+    background:#21618c;
 
-</section>
+    transform:scale(1.05);
 
+}
 
 
 
-<!-- GALERIA ECOMMERCE -->
+/* ==========================
+   ACERCA DE MI
+========================== */
 
 
-<section id="tienda">
+.sobre-mi{
 
+    background:white;
 
-<h2 class="text-center">
-Tienda Online
-</h2>
+    padding:60px 20px;
 
+}
 
-<hr>
 
+.sobre-mi p{
 
-<div class="galeria">
+    max-width:800px;
 
+    margin:auto;
 
-<div class="item">
-Producto 1
-</div>
+    text-align:center;
 
+    font-size:18px;
 
-<div class="item">
-Producto 2
-</div>
+    line-height:1.7;
 
+}
 
-<div class="item">
-Producto 3
-</div>
 
 
-<div class="item">
-Producto 4
-</div>
+/* ==========================
+   FORMULARIOS
+========================== */
 
 
-<div class="item">
-Producto 5
-</div>
+form{
 
+    background:white;
 
-<div class="item">
-Producto 6
-</div>
+    padding:30px;
 
+    border-radius:15px;
 
-</div>
+    max-width:700px;
 
+    margin:auto;
 
-</section>
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
 
+}
 
 
 
-<!-- SOBRE MI -->
+fieldset{
 
+    border:none;
 
-<section class="sobre-mi">
+    margin-bottom:25px;
 
+}
 
-<div class="container">
 
 
-<h2>
-Acerca de mí
-</h2>
+legend{
 
+    font-size:22px;
 
-<hr>
+    font-weight:bold;
 
+    color:#0d6efd;
 
-<p>
+    margin-bottom:15px;
 
-Soy Lucas Fernández, desarrollador web en formación.
-Me especializo en crear páginas modernas,
-responsive y fáciles de utilizar utilizando HTML,
-CSS y Bootstrap.
+}
 
-</p>
 
 
-</div>
+label{
 
+    display:block;
 
-</section>
+    margin-top:15px;
 
+    font-weight:bold;
 
+}
 
 
-<!-- REGISTRO -->
 
+input,
+select,
+textarea{
 
-<section id="registro" class="container py-5">
 
+    width:100%;
 
-<h2>
-Registro de Usuario
-</h2>
+    padding:12px;
 
+    margin-top:5px;
 
-<hr>
+    border:1px solid #ccc;
 
+    border-radius:8px;
 
+    font-size:16px;
 
-<form action="TU_ENDPOINT_FORMSPREE" method="POST">
 
+}
 
-<fieldset>
 
 
-<legend>
-Datos personales
-</legend>
+button{
 
+    background:#0d6efd;
 
-<label>
-Nombre completo:
-</label>
+    color:white;
 
-<input 
-type="text"
-name="nombre"
-required
-autocomplete="name">
+    border:none;
 
+    padding:12px 30px;
 
+    border-radius:10px;
 
-<label>
-Email:
-</label>
+    margin-top:20px;
 
-<input
-type="email"
-name="email"
-required
-autocomplete="email">
+    cursor:pointer;
 
+    font-size:16px;
 
+    transition:.3s;
 
-<label>
-Contraseña:
-</label>
+}
 
-<input
-type="password"
-name="password"
-required
-minlength="8"
-autocomplete="new-password">
 
 
+button:hover{
 
-<label>
-Edad:
-</label>
+    background:#084298;
 
-<input
-type="number"
-name="edad"
-min="13"
-max="100"
-required>
+}
 
 
 
-<label>
-Fecha nacimiento:
-</label>
+/* ==========================
+   FOOTER
+========================== */
 
-<input
-type="date"
-name="fecha"
-required>
 
+footer{
 
+    background:#212529;
 
-</fieldset>
+    color:white;
 
+    text-align:center;
 
+    padding:30px;
 
-<fieldset>
+    margin-top:40px;
 
+}
 
-<legend>
-Cuenta
-</legend>
 
 
+/* ==========================
+   NAVBAR
+========================== */
 
-<label>
-Usuario:
-</label>
 
+.navbar-brand{
 
-<input
-type="text"
-name="usuario"
-pattern="[A-Za-z0-9]{5,12}"
-minlength="5"
-maxlength="12"
-required
-placeholder="usuario123">
+    font-size:22px;
 
+    font-weight:bold;
 
+}
 
-<label>
-País:
-</label>
 
 
-<select name="pais" required>
+/* ==========================
+   RESPONSIVE
+========================== */
 
-<option>
-Argentina
-</option>
 
-<option>
-Chile
-</option>
+@media(max-width:768px){
 
-<option>
-Uruguay
-</option>
 
+    .hero h1{
 
-</select>
+        font-size:32px;
 
+    }
 
 
-<label>
-Ciudad:
-</label>
+    .foto-perfil{
 
+        width:160px;
 
-<input list="ciudades" name="ciudad">
+        height:160px;
 
+    }
 
-<datalist id="ciudades">
 
-<option value="Buenos Aires">
-
-<option value="Cordoba">
-
-<option value="Rosario">
-
-</datalist>
-
-
-
-</fieldset>
-
-
-
-<button>
-Registrarse
-</button>
-
-
-</form>
-
-
-</section>
-
-
-
-
-
-
-<!-- CONTACTO -->
-
-
-<section id="contacto" class="container py-5">
-
-
-<h2>
-Contacto
-</h2>
-
-
-<hr>
-
-
-
-<form>
-
-
-<label>
-Nombre:
-</label>
-
-
-<input type="text" required>
-
-
-
-<label>
-Email:
-</label>
-
-
-<input type="email" required>
-
-
-
-<label>
-Motivo:
-</label>
-
-
-<select>
-
-<option>
-Consulta
-</option>
-
-<option>
-Soporte
-</option>
-
-<option>
-Reclamo
-</option>
-
-
-</select>
-
-
-
-<label>
-Mensaje:
-</label>
-
-
-<textarea rows="5"></textarea>
-
-
-
-<label>
-
-<input type="checkbox" required>
-
-Acepto términos y condiciones
-
-</label>
-
-
-
-<button>
-Enviar
-</button>
-
-
-
-</form>
-
-
-
-</section>
-
-
-
-
-<!-- FOOTER -->
-
-
-<footer>
-
-
-<p>
-Lucas Fernández - Buenos Aires Argentina
-</p>
-
-
-<p>
-© 2026 Todos los derechos reservados
-</p>
-
-
-</footer>
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
-</body>
-
-</html>
+}
